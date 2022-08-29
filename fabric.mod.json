@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "fake-fabric-api",
+  "provides": [
+    "fabric-api"
+  ],
+  "version": "0.58.99999+build.1",
+  "depends": {
+    "fabric": "<0.60",
+    "fabricloader": ">=0.14.9"
+  },
+  "conflicts": {
+    "fabric-api": ">=0.60"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": [
+        "library"
+      ],
+      "parent": "fabric"
+    }
+  },
+  "name": "Fake Fabric API",
+  "description": "Provides a fake fabric-api mod id",
+  "license": "CC-BY-SA-4.0",
+  "icon": "assets/fake-fabric-api/icon.png",
+  "authors": ["teddyxlandlee"],
+  "suggests": {
+    "quilt_loader": ">=0.17.0-"
+  }
+}

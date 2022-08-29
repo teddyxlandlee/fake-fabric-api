@@ -1,0 +1,49 @@
+{
+ schema_version: 1,
+ quilt_loader: {
+  group: 'xland.mcmod.fake',
+  id: 'fake-fabric-api-quilt',
+  version: '1.0.0',
+  provides: [
+   {
+    id: 'fabric-api',
+    version: '0.58.99999+build.1',
+   },
+   {
+    id: 'fake-fabric-api',
+    version: '0.58.99999+build.1',
+   },
+  ],
+  depends: [
+   {
+    id: 'quilted_fabric_api',
+    version: '<4',
+   },
+   {
+    id: 'quilt_loader":,
+    version: '>=0.17.0-',
+   },
+  ],
+  breaks: {
+   'quilted_fabric_api': {
+    versions: '>=4',
+    reason: 'QFAPI >=4 provides fabric-api. Please remove fake-fabric-api.',
+   },
+  },
+  metadata: {
+   name: "Fake Fabric API (Quilt)",
+   description: 'Provides a fake fabric-api mod id',
+   license: 'CC-BY-SA-4.0',
+   icon: 'assets/fake-fabric-api/icon.png',
+   contributors: {
+    teddyxlandlee: 'Owner'
+   },
+  },
+ },
+ "modmenu": {
+    "badges": [
+      "library"
+    ],
+    "parent": "quilted_fabric_api",
+  },
+}
